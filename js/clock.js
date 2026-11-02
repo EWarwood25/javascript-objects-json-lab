@@ -2,6 +2,7 @@
 console.info("Hello JS"); 
 })();
 const myNode = document.createElement("div");
-digitalClock.appendChild(myNode);
+const digiClock = document.getElementById("digitalClock");
+digiClock.appendChild(myNode);
 const newDate = new Date();
-myNode.innerHTML = newDate.toDateString();
+myNode.innerHTML = newDate.toLocaleTimeString("en-GB", {timeStyle: "medium"});
