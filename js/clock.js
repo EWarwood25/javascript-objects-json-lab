@@ -21,9 +21,9 @@ const updateTime = () => {
     const rotMinutes = minutes * 6 - 90;
     minHand.style.transform = `rotate(${rotMinutes}deg)`;
 
-    const hours = newDate.getHours();
+    let hours = newDate.getHours();
+    hours = hours + newDate.getMinutes() / 60;
     const rotHours = hours * 30 - 90;
-    //const rotHours = hours * 0.6 - 90; //Testing fractions
     hrHand.style.transform = `rotate(${rotHours}deg)`;
 };
 setInterval(updateTime, 1000);
